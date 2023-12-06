@@ -1,0 +1,122 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	position: relative;
+	text-align: center;
+	background-color: #bcbcbc;
+}
+.tittle {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	text-transform: uppercase;
+	font-size: 3rem;
+	font-weight: bold;
+}
+.wrapper {
+	display: flex;
+	justify-content: space-around;
+}
+#resetGame {
+	position: absolute;
+	top: 17%;
+	left: 50%;
+	padding: 5px;
+	width: 150px;
+	height: 50px;
+	font-size: 1.4rem;
+	border-radius: 10px;
+	background-color: #b0bbc0;
+	transform: translate(-50%, -50%);
+	transition: color 0.5s, background-Color 0.5s;
+	cursor: pointer;
+}
+#resetGame:hover {
+	color: white;
+	background-color: rgb(29, 28, 28);
+}
+.cell {
+	display: table-cell;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #35ccdd;
+}
+.row {
+	display: table-row;
+	clear: both;
+	overflow: hidden;
+}
+.table {
+	display: table;
+	margin: 20px auto;
+	border: 1px solid #35ccdd;
+	box-shadow: 10px 10px 10px black;
+}
+
+.th {
+	font-size: 18px;
+	background-color: #0a1e2e;
+	color: #67a6b5;
+}
+.win {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 25%;
+	height: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2.5rem;
+	transform: translate(-50%, -50%);
+	background-color: transparent;
+	color: red;
+	z-index: 10;
+}
+.player {
+	margin: 0 0 20px 0;
+	text-transform: uppercase;
+	font-size: 3rem;
+	font-weight: bold;
+	color: #000000;
+	background-color: #9a9696;
+	box-shadow: 10px 10px 10px black;
+}
+.empty,
+.ship {
+	background-color: #0c7094;
+	cursor: pointer;
+}
+
+.hit {
+	background-color: #c04330;
+}
+
+.shot {
+	background-color: #070707;
+}
+.non-clickable {
+	pointer-events: none;
+	user-select: none; 
+	cursor: default; 
+}
+
+.shot::after {
+	position: relative;
+	content: '*';
+	top: 10%;
+	font-size: 24px;
+	line-height: 50px;
+	color: #ffffff;
+}
+
+select,
+input {
+	cursor: pointer;
+}
